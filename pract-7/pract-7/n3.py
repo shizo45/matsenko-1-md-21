@@ -1,0 +1,17 @@
+from PIL import Image, ImageFilter
+img1 = Image.open('1.jpg')
+img2 = Image.open('2.jpg')
+img3 = Image.open('3.jpg')
+img4 = Image.open('4.jpg')
+img5 = Image.open('5.jpg')
+imagePath = 'C:/Users/Машуля/Documents/python-laby/pythonProject/pract-7/save'
+conF = img1.filter(ImageFilter.CONTOUR)
+conF.save(f'{imagePath}/1-2.jpg')
+detF = img2.filter(ImageFilter.DETAIL)
+detF.save(f'{imagePath}/2-2.jpg')
+edgF = img3.filter(ImageFilter.EDGE_ENHANCE)
+edgF.save(f'{imagePath}/3-2.jpg')
+embF = img4.filter(ImageFilter.EMBOSS)
+embF.save(f'{imagePath}/4-2.jpg')
+sharF = img5.filter(ImageFilter.SHARPEN)
+sharF.save(f'{imagePath}/5-2.jpg')
